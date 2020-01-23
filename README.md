@@ -98,5 +98,6 @@ edit Dockerfile: change the ``CMD`` value as follows:-
     docker build -t myname/liquibase:1.1 .
         
 edit docker-compose.yml file with new tag and then rerun docker-compose:-
+
 ```docker-compose up```
 
