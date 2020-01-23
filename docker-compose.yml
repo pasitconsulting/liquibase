@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+  liquibase:
+    image: pasitconsulting/liquibase:3.2
+    depends_on:
+      - db
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD:hello123
+    ports:
+      - 5432:5432
