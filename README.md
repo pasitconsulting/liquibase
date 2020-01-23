@@ -51,10 +51,15 @@ start both containers as an app:-
 ```
 
 2) run a psql session in the running postgres container to verify schema objects, e.g. to confirm tables:-
+
 ``docker ps``   <==FIND CONTAINER ID OF RUNNING POSTGRES
+
 ```docker exec -it [POSTGRES CONTAINER ID] bash```
+
 ```psql -h localhost -p 5432 -U postgres```
+
 ```postgres=# \dt``  <== RUN '\dt' on POSTGRES PROMPT
+
 
 
 # Liquibase Configuration
