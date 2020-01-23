@@ -17,6 +17,7 @@ Postgresql (dockerhub image)
     docker build -t myname/liquibase:1.0 .
 
 3) edit docker-compose file to refer to above tag name
+
     version: '3.2'
     services:
       liquibase:
