@@ -12,11 +12,12 @@ Postgresql (dockerhub image)
 
 # Install Instructions:
 1) git clone this repo
+    ```git clone https://github.com/pasitconsulting/liquibase.git
 
 2) build image into local repo:- 
-    docker build -t myname/liquibase:1.0 .
+   ```docker build -t myname/liquibase:1.0 .
 
-3) edit docker-compose file to refer to above tag name
+3) edit ```docker-compose.yml``` file to refer to above tag name
 ```
     version: '3.2'
     services:
