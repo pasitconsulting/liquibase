@@ -21,7 +21,7 @@ Postgresql (dockerhub image)
     version: '3.2'
     services:
       liquibase:
-        image: myname/liquibase:1.0
+        image: myname/liquibase:1.0      <===EDIT THIS VALUE ONLY
         depends_on:
           - db
       db:
