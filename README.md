@@ -82,20 +82,33 @@ Each changeset in a formatted SQL file begins with a comment of the form
 ```    
 vi changelog.sql
 --liquibase formatted sql
-
---changeset YOURNAME:1
-create table test1 (
+  
+--changeset psenior:1
+create table test2 (
 id int primary key,
 name varchar(255)
 );
---rollback drop table test1;
 
---changeset YOURNAME:2
-insert into test1 (id, name) values (1, ‘name 1′);
-insert into test1 (id, name) values (2, ‘name 2′);
+--changeset psenior:2
+create table test3 (
+id int primary key,
+name varchar(255)
+);
 
---changeset YOURNAME:3 dbms:oracle
-create sequence seq_test;
+--changeset psenior:3
+create table test4 (
+id int primary key,
+name varchar(255)
+);
+
+--comment: added 2 rows to test3 table
+--changeset psenior:4
+insert into test3 (id, name) values (1, 'name 1');
+insert into test3 (id, name) values (2, 'name 2');
+
+--comment: remove table created earlier
+--changeset psenior:5
+drop table test3;
 ```
 
 ## Reference
