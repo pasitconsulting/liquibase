@@ -6,6 +6,7 @@ docker installed locally
 ## intro
 this repo contains a docker-compose file with 2 containers:- 
 Liquibase (built from local Dockerfile)
+
 Postgresql (dockerhub image)
 
 ## instructions:
