@@ -86,11 +86,12 @@ https://www.liquibase.org/get_started/quickstart_sql.html
 ## Tips & Tricks
 ### to import state of an existing database
 edit Dockerfile: change the ``CMD`` value as follows:-
+Note: same liquibase command as normal, except replace `update` with `changelogSync`
 
     CMD ["--changeLogFile=changelog.sql","--logLevel=warning","changelogSync"]
  
  rebuild Dockerfile:-
     docker build -t myname/liquibase:1.0 .
         
-Note: same liquibase command as normal, except replace `update` with `changelogSync`
+
 
