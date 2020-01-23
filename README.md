@@ -83,7 +83,7 @@ create sequence seq_test;
 https://www.liquibase.org/get_started/quickstart_sql.html
 
 ## Tips & Tricks
-## to import state of an existing database
+### to import state of an existing database
 rebuild dockerfile, but change the ``CMD`` value as follows:-
 
     CMD ["--changeLogFile=changelog.sql","--logLevel=warning","changelogSync"]
