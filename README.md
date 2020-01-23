@@ -58,7 +58,7 @@ start both containers as an app:-
 
 ```psql -h localhost -p 5432 -U postgres```
 
-```postgres=# \dt``  <== RUN '\dt' on POSTGRES PROMPT
+```postgres=# \dt```  <== RUN '\dt' on POSTGRES PROMPT
 
 
 
