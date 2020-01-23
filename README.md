@@ -1,15 +1,15 @@
- sql code migrations using Liquibase
+# sql code migrations using Liquibase
 
-##prereqs:-
+## prereqs:-
 docker installed locally
 
-##intro
+## intro
 this repo contains a docker-compose file with 2 containers:- 
 Liquibase (built from local Dockerfile)
 Postgresql (dockerhub image)
 
-##instructions:
-    git clone this repo
+## instructions:
+git clone this repo
 
 build image into local repo:- 
     docker build -t myname/liquibase:1.0 .
@@ -48,7 +48,7 @@ edit the change.log.sql file to include the initial sql code
 https://www.liquibase.org/get_started/quickstart_sql.html
 
 
-Sample Change Log
+## Sample Change Log
     
  
     --liquibase formatted sql
