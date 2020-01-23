@@ -77,6 +77,7 @@ insert into test1 (id, name) values (2, ‘name 2′);
 
 --changeset nvoxland:3 dbms:oracle
 create sequence seq_test;
+```
 
 ## Reference
 https://www.liquibase.org/get_started/quickstart_sql.html
