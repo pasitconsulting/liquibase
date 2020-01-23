@@ -48,7 +48,7 @@ you should get the following to stdout:-
     liquibase_liquibase_1 exited with code 0
 ```
 
-#Liquibase Configuration
+# Liquibase Configuration
 check files:-
 
 `changelog.sql`  - THIS IS THE KEY FILE USED TO PUSH SQL CHANGES TO THE DATABASE - see sample changelog below
