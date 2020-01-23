@@ -10,7 +10,7 @@ Liquibase (built from local Dockerfile)
 
 Postgresql (dockerhub image)
 
-## instructions:
+# Install Instructions:
 1) git clone this repo
 
 2) build image into local repo:- 
@@ -34,22 +34,27 @@ Postgresql (dockerhub image)
 ```
 
 start both containers as an app:-
-      docker-compose up
+
+    docker-compose up
 
 
 you should get the following to stdout:-
+```
     db_1         | 2020-01-23 13:49:02.421 UTC [1] LOG:  database system is ready to accept connections
     liquibase_1  | 13:59:58.811 INFO  [liquibase.integration.commandline.Main]: Liquibase Community 3.8.5 by Datical
     liquibase_1  | 13:59:59.404 INFO  [liquibase.integration.commandline.Main]: Liquibase: Update has been successful.
     liquibase_liquibase_1 exited with code 0
+```
 
-
+#Liquibase Configuration
 check files:-
-changelog.sql  - these are 
+`changelog.sql`  - THIS IS THE KEY FILE USED TO PUSH SQL CHANGES TO THE DATABASE - see sample changelog below
 
-edit the change.log.sql file to include the initial sql code 
+`liquibase.properties` - jdbc connection string etc
 
-https://www.liquibase.org/get_started/quickstart_sql.html
+
+typically you will need to modify `changelog.sql` and then rebuild the dockerfile and rerun docker-compose (as per above instructions)
+
 
 
 ## Sample Change Log
@@ -71,3 +76,5 @@ https://www.liquibase.org/get_started/quickstart_sql.html
     --changeset nvoxland:3 dbms:oracle
     create sequence seq_test;
 
+## Reference
+https://www.liquibase.org/get_started/quickstart_sql.html
