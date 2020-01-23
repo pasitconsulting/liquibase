@@ -72,7 +72,11 @@ check files:-
 
 typically you will need to modify `changelog.sql` and then rebuild the dockerfile and rerun docker-compose (as per above instructions)
 
+Changesets (a change to existing schema is appended to the changelog.sql file as a changeset)
 
+Each changeset in a formatted SQL file begins with a comment of the form
+
+--changeset author:id attribute1:value1 attribute2:value2 [...]
 
 ## Sample Change Log
 ```    
