@@ -1,4 +1,4 @@
-#sql code migrations using Liquibase
+ sql code migrations using Liquibase
 
 ##prereqs:-
 docker installed locally
