@@ -70,9 +70,9 @@ check files:-
 `liquibase.properties` - jdbc connection string etc
 
 
-typically you will need to modify `changelog.sql` and then rebuild the dockerfile and rerun docker-compose (as per above instructions)
+to make SQL schema changes you will need to modify `changelog.sql` and then rebuild the dockerfile and rerun docker-compose (as per above instructions)
 
-Changesets (a change to existing schema is appended to the changelog.sql file as a changeset)
+changelog.sql is comprised of ```Changesets``` (a change to existing schema is appended to the changelog.sql file as a changeset)
 
 Each changeset in a formatted SQL file begins with a comment of the form
 
