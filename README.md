@@ -94,6 +94,7 @@ edit Dockerfile: change the ``CMD`` value as follows:-
     CMD ["--changeLogFile=changelog.sql","--logLevel=warning","changelogSync"]
  
  rebuild Dockerfile:-
+ 
     docker build -t myname/liquibase:1.0 .
         
 
