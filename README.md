@@ -40,13 +40,22 @@ start both containers as an app:-
     docker-compose up
 
 
-you should get the following to stdout:-
+## To verify your db schema changes are successful:-
+
+1) you should get the following to stdout when running docker-compose up:-
 ```
     db_1         | 2020-01-23 13:49:02.421 UTC [1] LOG:  database system is ready to accept connections
     liquibase_1  | 13:59:58.811 INFO  [liquibase.integration.commandline.Main]: Liquibase Community 3.8.5 by Datical
     liquibase_1  | 13:59:59.404 INFO  [liquibase.integration.commandline.Main]: Liquibase: Update has been successful.
     liquibase_liquibase_1 exited with code 0
 ```
+
+2) run a psql session in the running postgres container to verify schema objects, e.g. to confirm tables:-
+``docker ps``   <==FIND CONTAINER ID OF RUNNING POSTGRES
+```docker exec -it [POSTGRES CONTAINER ID] bash```
+```psql -h localhost -p 5432 -U postgres```
+```postgres=# \dt``  <== RUN '\dt' on POSTGRES PROMPT
+
 
 # Liquibase Configuration
 check files:-
