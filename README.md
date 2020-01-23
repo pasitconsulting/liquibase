@@ -1,5 +1,8 @@
 sql code migrations using Liquibase
 
+this repo contains a docker-compose file with 2 containers:- Liquibase & Postgresql
+:
+
 edit the change.log.sql file to include the initial sql code 
 
 https://www.liquibase.org/get_started/quickstart_sql.html
