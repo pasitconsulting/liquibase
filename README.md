@@ -88,5 +88,5 @@ rebuild dockerfile, but change the ``CMD`` value as follows:-
 
     CMD ["--changeLogFile=changelog.sql","--logLevel=warning","changelogSync"]
     
-Note: same liquibase command as normal, except replace 'update' with 'changelogSync'
+Note: same liquibase command as normal, except replace `update` with `changelogSync`
 
